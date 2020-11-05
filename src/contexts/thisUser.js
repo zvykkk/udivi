@@ -23,6 +23,11 @@ const reduser = (state , action) => {
                 ...state,
                 isLoggedIn: false
             }
+        case 'LOGOUT':
+            return {
+                ...initialState,
+                isLoggedIn: false
+            }
         default:
             return state
     }
