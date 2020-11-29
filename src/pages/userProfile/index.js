@@ -7,7 +7,8 @@ import UserArticles from 'pages/userProfile/components/userArticles'
 const UserProfile = ({location, match}) => {
     const slug = match.params.slug
     const isFavorites = location.pathname.includes('favorites')
-    const apiUrl = `/profile/${slug}`
+    console.log('favorites',isFavorites)
+    const apiUrl = `/profiles/${slug}`
     const [{response}, doFetch] = useFetch(apiUrl)
 
     useEffect(() => {
@@ -40,7 +41,7 @@ const UserProfile = ({location, match}) => {
                             <ul className='nav nav-pills outline-active'>
                                 <li className='nav-item'>
                                     <NavLink
-                                        to={`/profile/${response.profile.username}`}
+                                        to={`/profiles/${response.profile.username}`}
                                         className='nav-link'
                                         exact
                                     >
@@ -49,7 +50,7 @@ const UserProfile = ({location, match}) => {
                                 </li>
                                 <li className='nav-item'>
                                     <NavLink
-                                        to={`/profile/${response.profile.username}/favorites`}
+                                        to={`/profiles/${response.profile.username}/favorites`}
                                         className='nav-link'
                                     >
                                         Favorites Posts

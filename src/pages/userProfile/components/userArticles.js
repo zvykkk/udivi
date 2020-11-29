@@ -10,7 +10,7 @@ import Pagination from "../../../components/pagination";
 
 const getApUrl = ({username, offset, isFavorites }) => {
     const params = isFavorites
-        ? {limit, offset, favorited: username}
+        ? {limit, offset, favarited: username}
         : {limit, offset, author: username}
 
         return `/articles?${stringify(params)}`

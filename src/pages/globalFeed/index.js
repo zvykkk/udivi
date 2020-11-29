@@ -34,7 +34,7 @@ const GlobalFeed = ({location, match}) => {
             </div>
             <div className='container page'>
                 <div className='row'>
-                    <div className='col-md-9'>
+                    <div className='col-9'>
                         <FeedToggler/>
                         {isLoading && <Loading/>}
                         {error && <ErrorMessage/>}
@@ -45,7 +45,7 @@ const GlobalFeed = ({location, match}) => {
                             </Fragment>
                         )}
                     </div>
-                    <div className='col-md-3'>
+                    <div className='col-3'>
                         <PopularTags/>
                     </div>
                 </div>

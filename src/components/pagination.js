@@ -23,16 +23,18 @@ const Pagination = ({total, limit, url, currentPage}) => {
     const pages = range(1, pagesCount)
 
     return (
-        <ul className='pagination'>
-            {pages.map(page => (
-                <PaginationItem
-                    page={page}
-                    currentPage={currentPage}
-                    url={url}
-                    key={page}
-                />
-            ))}
-        </ul>
+        <nav aria-label='Search results pages'>
+            <ul className='pagination'>
+                {pages.map(page => (
+                    <PaginationItem
+                        page={page}
+                        currentPage={currentPage}
+                        url={url}
+                        key={page}
+                    />
+                ))}
+            </ul>
+        </nav>
     )
 }
 

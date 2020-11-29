@@ -12,11 +12,11 @@ const TopBar = () => {
                     Udivi
                 </Link>
                 <ul className='nav navbar-nav float-xs-right'>
-                    <li className='nav-item'>
-                        <NavLink to='/' className='nav-link' exact >
-                            Home
-                        </NavLink>
-                    </li>
+                    {/*<li className='nav-item'>*/}
+                        {/*<NavLink to='/' className='nav-link' exact >*/}
+                            {/*Home*/}
+                        {/*</NavLink>*/}
+                    {/*</li>*/}
                     {currentUserState.isLoggedIn === false && (
                         <Fragment>
                             <li className='nav-item'>

@@ -15,8 +15,8 @@ export default () => {
     return(
         <Switch>
             <Route path='/' component={GlobalFeed} exact/>
-            <Route path='/profile/:slug' component={UserProfile}/>
-            <Route path='/profile/:slug/favorites' component={UserProfile}/>
+            <Route path='/profiles/:slug' component={UserProfile}/>
+            <Route path='/profiles/:slug/favorites' component={UserProfile}/>
             <Route path='/settings' component={Settings}/>
             <Route path='/articles/new' component={CreatArticle}/>
             <Route path='/articles/:slug/edit' component={EditArticle}/>
